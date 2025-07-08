@@ -31,6 +31,16 @@ I'm not 100% sure what this will make your bash profile look like, so lets check
 Next, check `vim ~/.bashrc`, and it should look like: 
 ![image](../images/bashrc_example.png)
 
+## Creating your first conda environment 
+We need a bunch of packages to successfully run a simulation. To do that, we're going to run `conda create --name SolvSens`, which will be the environment to hold those packages. 
+ 
+After running the conda create command, run: 
+1. `conda activate SolvSens`
+2. `conda install pip numpy scipy matplotlib scipy pbr decorator tqdm`
+3. `pip install vermouth`
+4. `pip install --user insane`
+5. `pip install polyply`
+
 At this point your HPC system should be ready to go! 
 
 ## Getting the files to run a simulation 
