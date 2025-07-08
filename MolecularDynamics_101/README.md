@@ -10,7 +10,8 @@ $$
 U_{potential} = U_{bonds} + U_{angles} + U_{dihedrals} + U_{Coulomb} + U_{LJ}
 $$ 
 
-**TODO: drawing to explain energy types**
+Thinking about these in terms of atoms, these look something like this: 
+![image](../images/contributions_PE.png)
 
 We are using the Martini forcefield. 
 
