@@ -22,7 +22,7 @@ protein=$1
 conc=$2
 gmx_mpi="/home/jkniblo/software/gromacs-2021.5/build/bin/gmx" 
 
-forcefield_dir=/home/jkniblo/SolutionSensitivity_martini3-idp/martini_v300/
+forcefield_dir="${HOME}/OrangePrimer/martini_v300/"
 
 polyply gen_params -seqf "$protein".fasta -f  Martini3-IDP_Poplyply.ff -name Protein -o PRO.itp
 echo "Done gen_params"
