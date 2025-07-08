@@ -44,7 +44,10 @@ Protein    1
 EOF
 
 
-boxL=$(python calcRE.py 65)
+length=$(sed -n '2p' "$protein".fasta | tr -d '\n' | wc -m)
+
+
+boxL=$(python calcRE.py $length)
 
 polyply gen_coords -p PRO_topol.top -o IDR.gro -name IDR -box $boxL $boxL $boxL
 

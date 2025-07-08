@@ -5,6 +5,7 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --output=run.log
 #SBATCH --error=run.err
+#SBATCH --time=1-00:00:00
 #SBATCH --partition=normal,compute_zone2,longjobs 
 
 eval "$(${HOME}/miniforge/bin/conda shell.bash hook)"
