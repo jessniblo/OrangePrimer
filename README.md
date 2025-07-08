@@ -21,21 +21,20 @@ Github is not only the source of this primer but where you will be able to uploa
 Congratulations! You now have this repo locally and can begin the next steps of the process!
 
 ## Remote Machine Setup
-There are three different types of remove machines you'll likely interact with while working here. The first two are known as High Performance Computing (HPC) systems and the third is a Virtual Machine (VM). The two HPC systems are named OrangeGrid and OrangeZest (Sometimes referred to by just Grid and Zest or HTCondor and HPC respectively).
+There are two different types of remove machines you'll likely interact with while working here. The first is a High Performance Computing (HPC) system and the second is a Virtual Machine (VM). 
 
-Here are the urls you'll need to know:
-OrangeGrid: TODO: <url>
-OrangeZest: TODO: <url>
-
-To access these machines you'll need to run the following command:
-
-`ssh <user-name>@<url>` (i.e. `ssh jkniblo@zest.syr.edu`)
+To get on OrangeZest of run jobs, you'll run the following command in the terminal window: 
+OrangeZest: `ssh <your-netid>@its-zest-login4.syr.edu`
 
 This will prompt you to enter your password and then grant you access to your home directory on that machine.
 
+We will also use the lab's virtual machine to store our data. To sign in, you'll run: 
+
+TODO: SukenikLab VM: `command`
+
 ## Running your first simulation
 
-TODO: Add folders with specific instructions for each type of simulation they might run and add a link here to those markdown documents
+Go to `Simulations` ([link](https://github.com/jessniblo/OrangePrimer/tree/main/Simulations))
 
 ## Terminal Cheat Sheet
 

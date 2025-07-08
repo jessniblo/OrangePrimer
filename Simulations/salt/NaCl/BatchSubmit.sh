@@ -11,7 +11,7 @@ do
 		mkdir -p "$salt"_"$conc"
 		for tri in  0 2 4
 		do
-			for file in ../../sequences/*.fasta
+			for file in ../../../Sequences/*.fasta
 			do 
 
 				filename=$(basename "$file")

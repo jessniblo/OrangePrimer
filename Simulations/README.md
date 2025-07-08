@@ -1,4 +1,4 @@
-## Simulations
+## Simulations 🖥️
 
 Two things are required to run a simulation: 
 1. A sequence
