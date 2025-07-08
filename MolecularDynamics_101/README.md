@@ -4,7 +4,19 @@ Molecular dynamics simualtions is a method that predicts the physical movements 
 
 When thinking about the proteins we are focusing on, molecular dynamiccs allows us to get information on a residue-by-residue basis. This is valuble because it is really challenging to experimentally understand what is happening on such a microscopic level. This means that by performing simualtions, we can start to think about how specific patterns in sequence cause changes to different environments. 
 
-# Simulations start from a sequence 
+Starting with a specific problem (like "how do certain intriniscally disordered proteins interact with water?"), we can get a protein and therefore the type of atoms that make up this protein. Depending on the type of system (protein, polymer, organic compounds), we pick something called a <ins>forcefield</ins>.  The <ins>forcefield</ins> defines how each atom interacts with each other through the potential energy. Potential energy is defined via 
+
+$$
+U_{potential} = U_{bonds} + U_{angles} + U_{dihedrals} + U_{Coulomb} + U_{LJ}
+$$ 
+
+**TODO: drawing to explain energy types**
+
+We are using the Martini forcefield. 
+
+
+
+## Simulations start from a sequence 
 In the `Sequences` folder, you'll see a protein sequence that looks something like this: 
 ![image](../images/fasta_example.png)
 
@@ -22,3 +34,6 @@ After running the first few commands in `./SystemPrep.sh`, you will have somethi
 
 Looking at this image, does this seem like a good molecular structure? Why? 
 
+## MD simualtions start with a minimization 
+
+An energy minimization 
