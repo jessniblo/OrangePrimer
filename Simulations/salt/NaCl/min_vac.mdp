@@ -1,0 +1,25 @@
+define                  = -DFLEXIBLE
+integrator              = steep
+emtol                   = 10.0
+emstep                  = 0.02
+nsteps                  = 100000
+
+nstlist                 = 20
+cutoff-scheme           = Verlet
+ns_type                 = grid
+pbc                     = xyz
+verlet-buffer-tolerance = 0.005
+
+coulombtype             = reaction-field
+rcoulomb                = 1.1
+epsilon_r               = 15
+epsilon_rf              = 0
+vdw_type                = cutoff
+vdw-modifier            = Potential-shift-verlet
+rvdw                    = 1.1
+
+constraints             = none      ; or all-bonds if you use constrained topologies
+constraint_algorithm    = Lincs
+
+gen_vel                 = no
+
