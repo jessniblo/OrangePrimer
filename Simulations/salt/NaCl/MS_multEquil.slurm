@@ -66,10 +66,10 @@ $gmx mdrun -s prodrun.tpr -ntmpi 1 -ntomp $threads -v >& run_prod.out
 #echo "Done production!" >> fyi.txt
 #wait 
 
-echo -e "0\n0" | gmx trjconv -s prodrun.tpr -f traj_comp.xtc -o traj_comp_corrected.xtc -pbc mol -center
+echo -e "0\n0" | $gmx trjconv -s prodrun.tpr -f traj_comp.xtc -o traj_comp_corrected.xtc -pbc mol -center
 
 
-echo "Protein" | gmx gyrate -s prodrun.tpr -f traj_comp_corrected.xtc -o rg_gyrate.xvg
+echo "Protein" | $gmx gyrate -s prodrun.tpr -f traj_comp_corrected.xtc -o rg_gyrate.xvg
 
 #touch Production_Complete.txt
 
