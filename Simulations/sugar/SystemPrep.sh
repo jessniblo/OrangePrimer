@@ -53,14 +53,6 @@ polyply gen_coords -p PRO_topol.top -o IDR.gro -name IDR -box $boxL $boxL $boxL
 
 
 
-#gmx_mpi editconf -f IDR.gro -o PRO_CG.gro -bt cubic -box $boxL $boxL $boxL <<EOF
-#1
-#EOF
-
-
-#echo Protein | gmx genrestr -f IDR.gro -o posre.itp -fc 1000 1000 1000
-
-
 $gmx_mpi grompp -p PRO_topol.top -f min_vac.mdp -c IDR.gro -o minimization-vac.tpr -maxwarn 1
 $gmx_mpi mdrun -deffnm minimization-vac -ntomp 2 -v
 
@@ -68,9 +60,15 @@ group=1
 echo -e "$group\n$group" | $gmx_mpi trjconv -f minimization-vac.gro -s minimization-vac.tpr -pbc mol -center -o centered.gro
 
 
+
+num_sug=$(python set_sugnum.py $boxL $conc)
+
+gmx insert-molecules -f centered.gro -ci sugar.gro -box $boxL $boxL $boxL -nmol $num_sug -radius 0.21 -try 500 -o PRO_CG_SUG.gro
+
+
 touch PRO_topol_SOL_IONS.top
 
-insane -f centered.gro -o PRO_SOL_IONS.gro -pbc keep -salt $conc -sol W -center -p PRO_topol_SOL_IONS.top
+insane -f PRO_CG_SUG.gro -o PRO_SOL_IONS.gro -pbc keep -salt 0.15 -sol W -center -p PRO_topol_SOL_IONS.top
 
 
 #Remove #include include martini.itp and substitute ion names in topology file

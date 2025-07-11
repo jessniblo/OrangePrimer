@@ -24,7 +24,7 @@ Congratulations! You now have this repo locally and can begin the next steps of 
 There are two different types of remove machines you'll likely interact with while working here. The first is a High Performance Computing (HPC) system and the second is a Virtual Machine (VM). 
 
 To get on OrangeZest of run jobs, you'll run the following command in the terminal window: 
-OrangeZest: `ssh <your-netid>@its-zest-login4.syr.edu`
+OrangeZest: `ssh -Y <your-netid>@its-zest-login4.syr.edu`
 
 This will prompt you to enter your password and then grant you access to your home directory on that machine.
 
