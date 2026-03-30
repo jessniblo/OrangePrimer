@@ -1,4 +1,5 @@
 to run a single IDR: 
+
 1) modify simple_single_IDR.py with sequence info
 	1A) change sequence name on line 15
 	1B) change sequence on line 16
@@ -8,6 +9,7 @@ to run a single IDR:
 
 
 to run multiple IDRs:
+
 1)create a csv named "sequences_to_sub.csv" with the format name,sequence 
 2) run ./submit_all_seq.sh 
 	**this will submit each sequence as an idependent job 
