@@ -148,7 +148,7 @@ centerDCD_simple(config_merge_data)
 # trajectory file ${record}.dcd can be used for post analysis, like calculating Rg (see below);
 
 # calculate simulated Rg
-df = load_parameters(tmp, dataset, cycle, initial_type).set_index("three")
+df = load_parameters(cwd, dataset, cycle, initial_type).set_index("three")
 t = md.load_dcd(f"{cwd}/{dataset}/{record}/{cycle}/{record}.dcd",
                 f"{cwd}/{dataset}/{record}/{cycle}/{record}.pdb")  # nm
 residues = [res.name for res in t.top.atoms]
